@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body style="background-color:rgb(56, 132, 219);">
+    <header style="text-align: right; font-size: bold; color: white">Powered by Regional PBT - Vincent Cheng, Ken Yip and Thomas Woo (Release 99)</header>
+    <h1 style="color: white">Macy's Merchandising - Inspection App</h1>
+
+    {% if (timeout_message) : %}
+    <h3 style="color: white">Your previous session was timed out ! Please login again</h3>
+    {% endif %}
+
+    <h2><a style="color: white"  href="{{ auth_url }}">Please click this link to sign in</a></h2>
+    
+    <footer style="text-align: right; font-size: bold; color: white"></footer>
+  </body>
+</html>

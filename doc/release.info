@@ -1,0 +1,65 @@
+Release 2022.102 (9/6/22)
+- Fix the Power BI link per Daniel's request 
+
+Release 2022.101
+- Fix inspection ID of "FR" problem  
+
+
+Release 2022.100
+- Give warning to user if file of same file name has existed under same sharepoint folder (MF folder)  
+- Fix Chinese file name download problem  
+- Fix upload error handling (heroku cut or app cut)
+
+
+Release 2022.99
+- Fix past insepction day page by solving sorting issue
+- Correct MISC radio button 
+
+Release 2022.98  
+- Fix React Start Up Problem 
+- Set QA Type Automatically based on login
+
+Release 2022.97 (W)
+- Fix inspection date on SharePoint 
+- React 17 root and spinner problem remained
+
+Release 2022.93
+- Fix inspection date on SharePoint 
+
+Release 2022.92
+- Change Inspection Date to String  
+- Ready for data conversion (with a script for conversion)
+- Fix 1st of a month inspections not being displayed properly  
+- Define Dabatbase schema 
+- Change Inspection Report's inspection date 
+
+Release 2022.91
+- Attempt to solve time zone problem.   
+
+Release 2022.90
+- Refine past inspection days page to have more filters
+
+Release 2022.89
+- Unprotect upload after sumbitted 
+
+Release 2022.88
+- Protect Governance section if type is SQA and correct upload error message
+
+Release 2022.87
+- Add validation on sessiondata for empty sharepoint userlist. It returns error if no userlist.
+
+Release 2022.86
+- remove secure_filename to allow Chinese characters  
+
+Release 2022.85.3
+- Add CAP and adjust the size of major and minor
+
+Release 2022.85.2
+- Add Exception hanlding in getting a ist of SharePoint site users
+
+Release 2022.85.1
+- Add user to each request, support synchronous file upload 
+- Check extension 
+- SharePoint handle zero files
+- Fix QA entry - must not be left blank
+
