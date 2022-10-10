@@ -535,6 +535,38 @@ def save_inspection():
     misc = content['misc']
     update_history = content['updateHistory']    
 
+
+    ## Check if submitted is intended, if so check if at least one file has been uploaded to SharePoint
+
+    if main['submitted']:
+
+        try:                    
+            folder = content['folder']
+            inspection_id = content['inspection_id']
+            
+            # ## below are for testing 
+            sharePointReport = "2022 Inspection Report"
+            relative_url = "2022InspRpt" + "/" + folder
+            
+            #if you want to get the items in the folder        
+            caml_query = CamlQuery()
+            caml_query.ViewXml = '''<View Scope="RecursiveAll"><Query><Where><Eq><FieldRef Name='Inspection_x0020_ID' /><Value Type='Text'>{0}</Value></Eq></Where></Query></View>'''.format(inspection_id)
+            caml_query.FolderServerRelativeUrl = relative_url
+        
+            # 3 Retrieve list items based on the CAML query 
+            #oList = ctx.web.lists.get_by_title('2022inspRpt') - title must match the list name in SharePoint
+            oList = ctx.web.lists.get_by_title(sharePointReport) 
+            items_in_sp = oList.get_items(caml_query) 
+            ctx.execute_query()
+
+            if len(items_in_sp) < 1:
+                raise Exception("Please upload documents to SharePoint before you lock !!")                               
+    
+        except Exception as e: 
+                ##print('error ', e.args[0])
+                return e.args[0], 500
+                
+
     # get the current time and convert to string
     updated_time = datetime.now(timezone.utc).ctime()
 
