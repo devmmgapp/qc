@@ -151,7 +151,7 @@ def check_logged(f):
 @check_logged
 def getPhoto():
 
-    #print('session email', session['email'])
+    print('session email', session['email'])
 
     if (os.environ['ENVIRONMENT']=="PROD"):        
         print("Getting photo for production")   
