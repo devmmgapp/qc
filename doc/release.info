@@ -1,3 +1,6 @@
+Release 2022.107 (10/19/22)
+- Added last login date to user profile collection 
+
 Release 2022.106 (10/10/22)
 - Check SP if there are files before it allows to submit  
 
