@@ -1,3 +1,6 @@
+Release 2022.108 (01/03/23)
+- Update SharePoint path by reading env  
+
 Release 2022.107 (10/19/22)
 - Added last login date to user profile collection 
 

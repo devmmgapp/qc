@@ -553,8 +553,13 @@ def save_inspection():
             inspection_id = content['inspection_id']
             
             # ## below are for testing 
-            sharePointReport = "2022 Inspection Report"
-            relative_url = "2022InspRpt" + "/" + folder
+            #sharePointReport = "2022 Inspection Report"
+            #relative_url = "2022InspRpt" + "/" + folder
+
+            ## below are getting from environment 
+            sharePointReport = os.environ['SHAREPOINT_REPORT']
+            relative_url = os.environ['SHAREPOINT_PATH'] + "/" + folder        
+        
             
             #if you want to get the items in the folder        
             caml_query = CamlQuery()
@@ -1438,12 +1443,12 @@ def sharepointfiles():
         inspection_id = content['inspection_id']
         
         # ## below are for testing 
-        sharePointReport = "2022 Inspection Report"
-        relative_url = "2022InspRpt" + "/" + folder
+        #sharePointReport = "2022 Inspection Report"
+        #relative_url = "2022InspRpt" + "/" + folder
 
         ## below are getting from environment 
-        # sharePointReport = os.environ['SHAREPOINT_REPORT']
-        # relative_url = os.environ['SHAREPOINT_PATH'] + "/" + folder        
+        sharePointReport = os.environ['SHAREPOINT_REPORT']
+        relative_url = os.environ['SHAREPOINT_PATH'] + "/" + folder        
                 
         libraryRoot = ctx.web.get_folder_by_server_relative_path(relative_url)
 

@@ -23,6 +23,7 @@ npm install react-router-dom
 
 npm install react-datepicker --save
 npm install axios
+npm install uuid 
 
 # Additional Python library  
 pip install python-dateutil - for converting data text to date object.
