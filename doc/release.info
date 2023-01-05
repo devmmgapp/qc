@@ -1,3 +1,6 @@
+Release 2022.109 (01/05/23)
+- Update ItemTotal to allow multiple delete 
+
 Release 2022.108 (01/03/23)
 - Update SharePoint path by reading env  
 
